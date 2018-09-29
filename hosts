@@ -1,10 +1,10 @@
 [DataBase]
-db ansible_host = Db
+Db
 
 [WebServer]
-web ansible_host= WEB
+WEB
 
 [Common]
-web ansible_host= WEB
-db ansible_host = Db
-ansible ansible_host=Ansible
+WEB
+Db
+Ansible
