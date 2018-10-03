@@ -1,10 +1,10 @@
-[databases]
-db
+[DataBase]
+Db
 
-[webservers]
-web
+[WebServer]
+WEB
 
-[common]
-web
-db
-ansible
+[Common]
+WEB
+Db
+Ansible
