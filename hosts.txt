@@ -1,0 +1,10 @@
+[databases]
+db
+
+[webservers]
+web
+
+[common]
+web
+db
+ansible
