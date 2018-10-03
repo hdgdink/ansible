@@ -6,3 +6,9 @@
 tag_Name_Db
 tag_Name_WEB
 tag_Name_Ansible
+
+[Webservers:children]
+tag_Name_WEB
+
+[Databases:children]
+tag_Name_Db

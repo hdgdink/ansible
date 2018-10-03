@@ -1,7 +1,7 @@
 ---
 
 - name: Customization of BAsh Promt
-  hosts: all
+  hosts: Common
   become: yes
   
   tasks:
