@@ -1,9 +1,0 @@
-[tag_Name_Db]
-Db
-
-[tag_Name_WEB]
-Web
-
-[Common:children]
-tag_Name_Db
-tag_Name_WEB

@@ -1,15 +1,15 @@
 ---
 
 - name: Install Apache Web Server
-  hosts: webservers
+  hosts: Common
   become: yes
 
   tasks:
     - name: Install apache
       yum: name=httpd state=latest
 
-    - name: Allow incoming HTTP connections
-      linefile: dest=/etc/httpd/con/httpd.cong regexp=^Listen 80 line="Listen 0.0.0.0:80"
+#    - name: Allow incoming HTTP connections
+#      lineinfile: dest=/etc/httpd/con/httpd.cong regexp=^Listen 80 line="Listen 0.0.0.0:80"
 
     - name: Create index.php
       file: path=/var/www/html/index.php state=touch
