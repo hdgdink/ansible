@@ -4,9 +4,5 @@
   hosts: Common
   become: yes
   
-  tasks:
-  - name: Colorful prompt
-    shell: echo "PS1='\[\033[02;32m\]\u@\H:\[\033[02;34m\]\w\$\[\033[00m\]'" >> /home/ec2-user/.bashrc
-
-  - name: Accept settings
-    shell: source ~/.bashrc
+  roles: common 
+ 
