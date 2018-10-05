@@ -4,5 +4,6 @@
   hosts: Common
   become: yes
   
-  roles: common 
+  roles:
+  - common 
  
