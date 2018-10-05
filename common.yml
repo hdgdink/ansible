@@ -1,9 +1,0 @@
----
-
-- name: Customization of BAsh Promt
-  hosts: Common
-  become: yes
-  
-  roles:
-  - common 
- 
