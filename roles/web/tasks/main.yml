@@ -8,12 +8,17 @@
     - MySQL-python
         
 - name: Allow incoming HTTP connections
-  lineinfile: dest=/etc/httpd/conf/httpd.conf regexp=^Listen 
-              line="Listen 0.0.0.0:80"
+  lineinfile:
+    dest=/etc/httpd/conf/httpd.conf 
+    regexp=^Listen 
+    line="Listen 0.0.0.0:80"
   notify: restart apache
 
 - name: Create index
-  template: src=index.php.j2 dest=/var/www/html/index.php mode=0644
+  template: 
+    src=index.php.j2 
+    dest=/var/www/html/index.php 
+    mode=0644
   notify: restart apache
 
 - name: Start Apache

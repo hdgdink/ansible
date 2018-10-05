@@ -7,14 +7,24 @@
     - mariadb-server
         
 - name: Start MySQL
-  service: name=mariadb state=started enabled=yes
+  service:
+    name=mariadb
+    state=started
+    enabled=yes
 
 #- name: Allow incommig SQL connections
 #  lineinfile: dest=/etc/my.cnf
 #  notify: restart mysql
 
 - name: Create Demo DB
-  mysql_db: name=demo state=present
+  mysql_db: 
+    name=demo 
+    state=present
 
 - name: Create DB User
-  mysql_user: name=root password=rootroot priv=demo.*:ALL host='%' state=present      
+  mysql_user: 
+    name=root 
+    password=rootroot 
+    priv='*.*:ALL' 
+    host={{ansible_hostname}} 
+    state=present      
