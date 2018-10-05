@@ -4,26 +4,6 @@
   hosts: Databases
   become: yes
   
-  tasks:
-    - name: Install tools
-      yum: name={{item}} state=present update_cache=yes
-      with_items: 
-        - MySQL-python
-        - mariadb-server
-        
-    - name: Start MySQL
-      service: name=mariadb state=started enabled=yes
-
-#    - name: Allow incommig SQL connections
-#      lineinfile: dest=/etc/my.cnf
-#      notify: restart mysql
-
-    - name: Create Demo DB
-      mysql_db: name=demo state=present
-
-    - name: Create DB User
-      mysql_user: name=root password=rootroot priv=demo.*:ALL host='%' state=present  
-
-  handlers:
-    - name: restart mysql
-      service: name=mariadb state=restarted
+  roles:
+  - db
+    
