@@ -23,8 +23,8 @@
 
 - name: Create DB User
   mysql_user: 
-    name=root 
-    password=rootroot 
+    name={{username}} 
+    password={{password}} 
     priv='*.*:ALL' 
     host={{ansible_hostname}} 
     state=present      
