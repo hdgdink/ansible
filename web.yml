@@ -1,8 +1,0 @@
----
-
-- name: Install Apache Web Server
-  hosts: Webservers
-  become: yes
-
-  roles:
-    - web
