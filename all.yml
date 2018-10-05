@@ -2,21 +2,18 @@
 - name: Customization of Bash Promt
   hosts: Common
   become: yes
-  
   roles:
    - common 
    
 - name: Install Apache Web Server
   hosts: Webservers
   become: yes
-
   roles:
     - web
- 
+    
 - name: Install MySQl environment
   hosts: Databases
   become: yes
-  
   roles:
    - db
     
