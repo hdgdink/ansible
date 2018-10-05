@@ -1,5 +1,4 @@
----
-
+--- 
 - name: Customization of Bash Promt
   hosts: Common
   become: yes
