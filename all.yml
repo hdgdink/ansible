@@ -1,4 +1,4 @@
---- 
+---
 - name: Customization of Bash Promt
   hosts: Common
   become: yes
@@ -10,10 +10,9 @@
   become: yes
   roles:
     - web
-    
+ 
 - name: Install MySQl environment
   hosts: Databases
   become: yes
   roles:
    - db
-    

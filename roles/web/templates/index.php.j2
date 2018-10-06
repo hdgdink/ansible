@@ -1,8 +1,10 @@
 <?php
-$servername = "{{ansible_hostname}}";
-$username = "{{username}}";
-$password = "{{password}}";
+{% for host in groups['Databases'] %}
+$servername ="{{hostvars[host].ansible_default_ipv4.address}}";
+$username = "{{hostvars[host].username}}";
+$password = "{{hostvars[host].password}}";
 $hostname = gethostname();
+{% endfor %}
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection
