@@ -26,5 +26,5 @@
     name={{ username }} 
     password={{ password }} 
     priv='*.*:ALL' 
-    host={{ansible_default_ipv4.address}} 
+    host='%' 
     state=present      
